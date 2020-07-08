@@ -11,8 +11,6 @@ import UIKit
 class HexToUIColor {
     
     public static func hexToUIColor(_ hexVal: String) -> UIColor {
-
-
         if ((hexVal.count) != 6) {
             return UIColor.gray
         }

@@ -20,4 +20,14 @@ extension UIView {
         trailingAnchor.constraint(equalTo: superView.trailingAnchor).isActive = true
     }
     
+    func constraintToSafeArea() {
+        guard let superview = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+
+        topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor).isActive = true
+        leftAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leftAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        rightAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.rightAnchor).isActive = true
+    }
+    
 }

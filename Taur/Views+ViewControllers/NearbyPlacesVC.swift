@@ -28,7 +28,7 @@ class NearbyPlacesVC: UIViewController {
     private func configureTableView() {
         view.addSubview(tableView)
         tableView.backgroundColor = UIColor(named: "AccentColor")
-        tableView.separatorColor = UIColor(named: "")
+        tableView.separatorColor = UIColor(named: "LineColor")
         title = "Near You \(getRandomFoodEmoji())"
         tableView.delegate = self
         tableView.dataSource = self
@@ -53,6 +53,9 @@ extension NearbyPlacesVC: UITableViewDataSource, UITableViewDelegate {
         if restaurants.count > indexPath.row {
             cell.setRestaurant(restaurants[indexPath.row])
         }
+        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) {
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: self.tableView.bounds.width)
+        }
         return cell
     }
     
@@ -61,7 +64,7 @@ extension NearbyPlacesVC: UITableViewDataSource, UITableViewDelegate {
         let restaurantInfo = RestaurantInfoVC()
         restaurantInfo.setRestaurant(restaurants[indexPath.row])
         self.navigationController?.pushViewController(restaurantInfo, animated: true)
-        
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
