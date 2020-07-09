@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SafariServices
 
 class RestaurantInfoVC: UIViewController {
     
@@ -97,5 +98,14 @@ class RestaurantInfoVC: UIViewController {
         zomatoButton.backgroundColor = .white
         zomatoButton.setImage(UIImage(named: "ZomatoLogo"), for: .normal)
         zomatoButton.imageView?.layer.transform = CATransform3DMakeScale(1.45 , 1.45, 1.45)
+        zomatoButton.addTarget(self, action: #selector(zomatoButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc fileprivate func zomatoButtonPressed() {
+        guard let url = URL(string: restaurant?.url ?? "") else {
+            return
+        }
+        let zomatoPageVC = SFSafariViewController(url: url)
+        present(zomatoPageVC, animated: true)
     }
 }

@@ -81,7 +81,7 @@ class NearbyPlaceCell: UITableViewCell {
         restaurantType.leftAnchor.constraint(equalTo: restaurantRating.rightAnchor, constant: ratingOffScreenAmount).isActive = true
         restaurantType.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.8).isActive = true
         restaurantType.adjustsFontSizeToFitWidth = true
-        restaurantType.textColor = .darkGray
+        //restaurantType.textColor = .darkGray
         restaurantType.font = UIFont.systemFont(ofSize: UIFont.smallSystemFontSize)
     }
 
