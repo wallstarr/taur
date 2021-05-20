@@ -1,6 +1,6 @@
 ## Taur
 
-A simple iOS application that finds nearby restaurants. Written in Swift 5 with a fully programmatically written UI (no StoryBoards). Frameworks used include MapKit and CoreLocation.
+A simple iOS application that finds nearby restaurants. Written in Swift 5 with a fully programmatically written UI (no StoryBoards). Frameworks used include MapKit and CoreLocation. GIF demos are found below!
 
 ### Start
 
