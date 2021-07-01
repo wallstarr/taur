@@ -4,7 +4,7 @@ A simple iOS application that finds nearby restaurants. Written in Swift 5 with 
 
 ### Start
 
-If you want to download the files for this app and test it, be sure that in the RestaurantManager class you to replace YOUR-API-KEY-HERE with your own Zomato API key. Free keys are available from [their website](https://developers.zomato.com/api). 
+If you want to download the files for this app and test it, be sure that in the RestaurantManager class you to replace YOUR-API-KEY-HERE with your own Zomato API key. ~~Free keys are available from their website~~ UPDATE: Zomato API is no longer available for use, so this app will also not work. 
 
 
 ### Some Demo Gifs:
